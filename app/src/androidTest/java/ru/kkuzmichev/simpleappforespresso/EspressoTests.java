@@ -58,7 +58,7 @@ public class EspressoTests {
         settingsInteraction.check(matches(isDisplayed()));
 
         settingsInteraction.perform(click());
-        Intents.intended(hasAction(Intent.ACTION_VIEW));
+        Intents.intended(allOf(hasData("https://google.com"), hasAction(Intent.ACTION_VIEW)));
     }
 
     @Before
